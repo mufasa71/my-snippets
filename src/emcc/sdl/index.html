@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script>
+      var Module = {
+        _canvas: null,
+        get canvas() {
+          this._canvas = document.getElementById("my-canvas");
+
+          return this._canvas;
+        },
+        set canvas(value) {
+          this._canvas = value;
+        },
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <canvas id="my-canvas"></canvas>
+  </body>
+</html>
+
